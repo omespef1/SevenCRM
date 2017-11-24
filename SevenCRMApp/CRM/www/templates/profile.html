@@ -1,0 +1,116 @@
+﻿<ion-view view-title="Inicio" ng-init="init();" class="background-theme">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/banner2.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url(data:image/png;base64,{{user.Usu_Foto}});"></div>
+                <h4 style="color: white;">{{user.Usu_Codi}}</h4>
+                <h4 style="margin-bottom: 5px;"><a class="light">{{user.Usu_Nomb}}</a></h4>
+            </div>
+        </div>
+
+        <div class="animate-fade-slide-in-right">
+            <div ui-sref="crm.actividades" class="card ink ink-dark" href="#/app/gallery">
+                <div class="item item-avatar item-text-wrap in in done" style="transition-delay: 0.19s;">
+                    <span class="avatar no-circle" style="background-image: url('img/calendar-256.png');"></span>
+                    <br />
+                    <h2><div class="title">Actividades</div></h2>
+                    <!--<div class="card-footer text-right">
+                        <i class="icon ion-chatbubbles positive"></i> 6
+                        <i class="icon ion-heart assertive"></i> 23
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+            <div ui-sref="crm.flujos" class="card ink ink-dark">
+                <div class="item item-avatar item-text-wrap in in done" style="transition-delay: 0.19s;">
+                    <span class="avatar no-circle" style="background-image: url('img/1-47-256.png');"></span>
+                    <h2><div class="title">Flujos</div></h2>
+                    <div class="card-footer text-right">
+                        <i class="icon ion-android-notifications-none assertive"></i> {{pendientes}}
+                        <div class="pull-left">
+                            <!--<i class="icon ion-clock"></i>--> Cantidad
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card ink ink-dark" ng-click="logout();">
+                <div class="item item-avatar item-text-wrap in in done" style="transition-delay: 0.19s;">
+                    <span class="avatar no-circle" style="background-image: url('img/exit-256.png');"></span>
+                    <br />
+                    <h2><div class="title">Salir</div></h2>
+                    <!--<div class="card-footer text-right">
+                        <i class="icon ion-chatbubbles positive"></i> 6
+                        <i class="icon ion-heart assertive"></i> 23
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+
+        
+
+      <!-- <div class="list half">
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>Making </h2>
+                    <img class="full-image" src="img/sansa-snowcastle2.jpg">
+                </div>
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>ohai!</h2>
+                    <img class="full-image" src="img/sansa-snowcastle4.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="list half">
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>Making </h2>
+                    <img class="full-image" src="img/sansa-snowcastle2.jpg">
+                </div>
+            </div>
+            <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>ohai!</h2>
+                    <img class="full-image" src="img/sansa-snowcastle4.jpg">
+                </div>
+            </div>
+        </div>-->
+
+
+        <!--<div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="crm.flujos" class="tab-item">
+                <i class="icon ion-arrow-graph-up-right"></i> Flujos
+            </a>
+            <a ui-sref="crm.friends" class="tab-item">
+                <i class="icon ion-android-people"></i> Usuarios
+            </a>
+            <a ui-sref="crm.gallery" class="tab-item">
+                <i class="icon ion-images"></i> Invitar
+            </a>
+        </div>
+        <h4 class="content double-padding-x">Agenda</h4>
+        <div class="text-center">
+            <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="prev();"></a>
+                <small id="fechaAgenda">01/01/2016 - 07/01/2016</small>
+            <a class="button icon-left ion-chevron-right button-clear button-dark" ng-click="next();"></a>
+        </div>
+        <div class="list animate-fade-slide-in-right">
+            <div ng-repeat="dia in Agenda">
+                <div class="item item-divider">
+                    {{dia.GrupoHora}}
+                </div>
+                <a ng-repeat="horario in dia.Agenda" class="item item-avatar item-icon-right" ng-click="seleccionarHorario(horario);">
+                    <img style="border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;" src="img/clock_icon.png">
+                    <h3>{{horario.AGE_FINI | date: 'h:mm:ss a'}} - {{horario.AGE_FFIN | date: 'h:mm:ss a'}}</h3>
+                    <p>{{horario.PRO_NOMB}} - {{horario.CON_NOMB}} {{horario.CON_APEL}} - {{horario.ACT_NOMB}} - {{horario.AGE_ASUN}}</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                </a>
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenCRMApi", "SevenCRMApi\SevenCRMApi.csproj", "{6AD8C438-2FC7-4FCE-BD6C-BD585B0C012D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenCentralizacion", "SevenCentralizacion\SevenCentralizacion.csproj", "{C10A1DF1-6B9A-4289-A11D-6511E69CD335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AD8C438-2FC7-4FCE-BD6C-BD585B0C012D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD8C438-2FC7-4FCE-BD6C-BD585B0C012D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD8C438-2FC7-4FCE-BD6C-BD585B0C012D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD8C438-2FC7-4FCE-BD6C-BD585B0C012D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10A1DF1-6B9A-4289-A11D-6511E69CD335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10A1DF1-6B9A-4289-A11D-6511E69CD335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10A1DF1-6B9A-4289-A11D-6511E69CD335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10A1DF1-6B9A-4289-A11D-6511E69CD335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

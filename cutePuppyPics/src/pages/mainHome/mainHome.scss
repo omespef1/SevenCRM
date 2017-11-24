@@ -1,0 +1,38 @@
+.card-background-page {
+
+    height: 130px;
+    background: url(../../assets/img/banner.png);
+
+  div {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 62%;
+    width: 100%;
+    color: #fff;
+  }
+
+  .card-circle-img {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px white solid;
+  }
+
+}

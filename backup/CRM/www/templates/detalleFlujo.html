@@ -1,0 +1,60 @@
+﻿<ion-view view-title="Detalle del Flujo" ng-init="init();" class="background-theme">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in-right">
+
+        <div class="item card-item">
+            <div class="card light-bg ink ink-dark">
+                <div ng-class="{'bgReg': flujo.ObjResult.SEG_PRIO == 'A', 'bgBlue': flujo.ObjResult.SEG_PRIO == 'M', 'bgGreen': flujo.ObjResult.SEG_PRIO == 'B'}" 
+                    style="position: absolute; height: 100%;">&nbsp;</div>
+                <div class="item item-text-wrap">
+                    <strong>Caso</strong> {{flujo.ObjResult.CAS_CONT}}
+                    <div class="card-footer text-left">
+                        <p>
+                            <b>Prioridad: </b>{{flujo.ObjResult.SEG_PRIO}}<br />
+                            <b>Segimiento: </b>{{flujo.ObjResult.SEG_CONT}}<br />
+                            <b>Asunto: </b>{{flujo.ObjResult.SEG_SUBJ}}<br />
+                            <b>Quien Registra: </b>{{flujo.ObjResult.USU_NOMB}}<br />
+
+                            <p ng-show="flujo.ObjResult.SOLICITADO != null && flujo.ObjResult.SOLICITADO != ''"><b>Solicitado para: </b>{{flujo.ObjResult.SOLICITADO}}<br /></p>
+
+                            <b>Descripción: </b>{{flujo.ObjResult.CAS_DESC}}<br />
+                            <b>Fecha de recibido: </b>{{flujo.ObjResult.SEG_FREC | date: 'dd/MM/yyyy'}}&nbsp;{{flujo.ObjResult.SEG_HREC | date: 'h:mm:ss a'}}<br />
+                            <b>Fecha Límite: </b>{{flujo.ObjResult.SEG_FLIM | date: 'dd/MM/yyyy'}}&nbsp;{{flujo.ObjResult.SEG_HLIM | date: 'h:mm:ss a'}}<br />
+                            <div ng-show="flujo.ObjResult.ETA_SSQL != '' && flujo.ObjResult.ADICIO != null && flujo.ObjResult.ADICIO != ''">
+                                <br /><h3>Datos Adicionales: </h3>
+                                <div ng-bind-html="flujo.ObjResult.ADICIO"></div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item">
+            <div class="card light-bg ink ink-dark">
+                <div class="bgInfo" 
+                    style="position: absolute; height: 100%;">&nbsp;</div>
+                <div class="item item-text-wrap">
+                    <strong>COMENTARIOS PARA EL EJECUTOR</strong>
+                    <div class="card-footer text-left">
+                        <p>
+                            {{flujo.ObjResult.SEG_COME}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item">
+
+
+            <strong>COMENTARIOS PARA EL SIGUIENTE EJECUTOR</strong>
+            <textarea class="row" ng-model="flujo.ObjResult.COMENTARIOS"></textarea>
+            <br />
+            <button class="button icon-left ion-checkmark-circled button-balanced"
+                ng-click="aprobarFlujo();">Aprobar</button>
+            <button class="button icon-right ion-close-circled button-assertive"
+                ng-click="rechazarFlujo();">Rechazar</button>
+        </div>
+        
+    </ion-content>
+</ion-view>

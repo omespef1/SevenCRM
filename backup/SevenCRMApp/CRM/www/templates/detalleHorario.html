@@ -1,0 +1,20 @@
+﻿<ion-modal-view title="Seleccionar Conexión" ng-init="initConexion();">
+    <div class="item card-item">
+        <div class="card light-bg ink ink-dark">
+            <!--<div ng-class="{'bgReg': flujo.ObjResult.SEG_PRIO == 'A', 'bgBlue': flujo.ObjResult.SEG_PRIO == 'M', 'bgGreen': flujo.ObjResult.SEG_PRIO == 'B'}" 
+                style="position: absolute; height: 100%;">&nbsp;</div>-->
+            <div class="item item-text-wrap">
+                <strong>{{horarioSeleccionado.AGE_FINI | date: 'h:mm:ss a'}} - {{horarioSeleccionado.AGE_FFIN | date: 'h:mm:ss a'}}</strong>
+                <div class="card-footer text-left">
+                    <p>
+                        {{horarioSeleccionado.PRO_NOMB}}<br />
+                        {{horarioSeleccionado.CON_NOMB}} {{horarioSeleccionado.CON_APEL}}<br />
+                        {{horarioSeleccionado.ACT_NOMB}}<br />
+                        {{horarioSeleccionado.AGE_ASUN}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="button button-block button-balanced" ng-click="closeModalHorario();">OK</button>
+    </div>
+</ion-modal-view>

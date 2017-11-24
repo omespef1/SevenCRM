@@ -1,0 +1,91 @@
+﻿<ion-view view-title="Flujos" ng-init="init();" class="background-theme">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in-right">
+        <!--ng-href="#/crm/detalleFlujo/{{flujo.CAS_CONT}}"
+            ng-click="selectFlujo(flujo);"-->
+        <a ng-repeat="flujo in Flujos" class="item card-item">
+            <div class="card light-bg ink ink-dark no-margin">
+                <div ng-class="{'bgReg': flujo.SEG_PRIO == 'A', 'bgBlue': flujo.SEG_PRIO == 'M', 'bgGreen': flujo.SEG_PRIO == 'B'}" 
+                    style="position: absolute; height: 100%;">&nbsp;</div>
+                <div class="item item-text-wrap padding-8 item-icon-right" ng-click="ToggleDetalle(flujo);">
+                    <strong>Caso</strong> {{flujo.CAS_CONT}} &nbsp;
+                    <small class="text-left" style="display: block;display: -webkit-box;width: 80%;
+                          font-size: 12px;line-height: 1.4;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: unset;text-overflow: ellipsis;">
+                        {{flujo.CAS_DESC}}</small>                    
+                    <i ng-class="{'icon ion-chevron-up' : !flujo.MOSTRARDETALLE, 'icon ion-chevron-down': flujo.MOSTRARDETALLE}" 
+                        style="font-size:12px;"></i>
+                </div>
+                <div name="xxx" ng-show="flujo.MOSTRARDETALLE" class="item text-left">
+                    <hr />
+                    <p>
+                        <!--Prioridad: {{flujo.SEG_PRIO}}<br />
+                        Segimiento: {{flujo.SEG_CONT}}<br />
+                        Asunto: {{flujo.SEG_SUBJ}}<br />
+                        Quien Registra: {{flujo.USU_NOMB}}<br />
+                        Descripción: {{flujo.CAS_DESC}}<br />
+                        Fecha de recibido: {{flujo.SEG_FREC | date: 'dd/MM/yyyy'}} <br />
+                        Fecha Límite: {{flujo.SEG_FLIM | date: 'dd/MM/yyyy'}}<br />
+                        <div ng-show="flujo.ETA_SSQL != '' && flujo.ADICIO != null && flujo.ADICIO != ''">
+                            <br /><h3>Datos Adicionales: </h3>
+                            <div ng-bind-html="flujo.ADICIO"></div>
+                        </div>-->
+                        <b>Prioridad: </b>{{flujo.SEG_PRIO}}<br />
+                        <b>Segimiento: </b>{{flujo.SEG_CONT}}<br />
+                        <b>Asunto: </b>{{flujo.SEG_SUBJ}}<br />
+                        <b>Quien Registra: </b>{{flujo.USU_NOMB}}<br />
+
+                        <p ng-show="flujo.SOLICITADO != null && flujo.SOLICITADO != ''"><b>Solicitado para: </b>{{flujo.SOLICITADO}}<br /></p>
+
+                        <b>Descripción: </b>{{flujo.CAS_DESC}}<br />
+                        <b>Fecha de recibido: </b>{{flujo.SEG_FREC | date: 'dd/MM/yyyy'}}&nbsp;{{flujo.SEG_HREC | date: 'h:mm:ss a'}}<br />
+                        <b>Fecha Límite: </b>{{flujo.SEG_FLIM | date: 'dd/MM/yyyy'}}&nbsp;{{flujo.SEG_HLIM | date: 'h:mm:ss a'}}<br />
+                        <div ng-show="flujo.ETA_SSQL != '' && flujo.ADICIO != null && flujo.ADICIO != ''">
+                            <br /><h3>Datos Adicionales: </h3>
+                            <div ng-bind-html="flujo.ADICIO"></div>
+                        </div>
+                        <hr />
+
+                        <strong>COMENTARIOS PARA EL EJECUTOR</strong>
+                        <div class="text-left">
+                            <span style="white-space: pre-line;">
+                                {{flujo.SEG_COME}}
+                            </span>
+                        </div>
+
+                        <hr />
+                        <strong>COMENTARIOS PARA EL SIGUIENTE EJECUTOR</strong>
+                        <textarea class="row" ng-model="flujo.COMENTARIOS"></textarea>
+                        <br />
+                        <div class="row">
+                            <div class="col">
+                                <button class="button icon-left ion-checkmark-circled button-balanced padding-left_rigth-10"
+                                    ng-click="aprobarFlujo(flujo);">Aprobar</button>
+                            </div>
+                            <div class="col">
+                                <button class="button icon-right ion-close-circled button-assertive padding-left_rigth-10"
+                                    ng-click="rechazarFlujo(flujo);">Rechazar</button>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+
+                <!--<p ng-show="MostrarDetalle">
+                    <b>Prioridad: </b>{{flujo.SEG_PRIO}}<br />
+                    <b>Segimiento: </b>{{flujo.SEG_CONT}}<br />
+                    <b>Asunto: </b>{{flujo.SEG_SUBJ}}<br />
+                    <b>Quien Registra: </b>{{flujo.USU_NOMB}}<br />
+
+                    <p ng-show="flujo.SOLICITADO != null && flujo.SOLICITADO != ''"><b>Solicitado para: </b>{{flujo.SOLICITADO}}<br /></p>
+
+                    <b>Descripción: </b>{{flujo.CAS_DESC}}<br />
+                    <b>Fecha de recibido: </b>{{flujo.SEG_FREC | date: 'dd/MM/yyyy'}}&nbsp;{{flujo.SEG_HREC | date: 'h:mm:ss a'}}<br />
+                    <b>Fecha Límite: </b>{{flujo.SEG_FLIM | date: 'dd/MM/yyyy'}}&nbsp;{{flujo.SEG_HLIM | date: 'h:mm:ss a'}}<br />
+                    <div ng-show="flujo.ETA_SSQL != '' && flujo.ADICIO != null && flujo.ADICIO != ''">
+                        <br /><h3>Datos Adicionales: </h3>
+                        <div ng-bind-html="flujo.ADICIO"></div>
+                    </div>
+                </p>-->
+
+            </div>
+        </a>
+    </ion-content>
+</ion-view>

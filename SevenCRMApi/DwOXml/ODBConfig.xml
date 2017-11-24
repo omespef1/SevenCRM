@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Parametros xmlns:xlink="http://www.w3.org/1999/xlink">
+  <Parametro>
+    <connectionString>Server=cerezo;User ID=sa;Password=Cerezo2016;Database=SevenDesarrollo;App=SevenCRM;</connectionString>
+    <providerName>SQL</providerName><!--System.Data.OracleClient-->
+  </Parametro>
+  <MsjExc>
+    <ME0001>KBOGnExcepcion</ME0001>
+    <ME0002>Error en </ME0002>
+    <ME0003>FormatException</ME0003>
+    <ME0004>SqlException</ME0004>
+    <ME0005>duplicate key</ME0005>
+    <ME0006>Registro duplicado. Mensaje generado por restriccion en BD, verifique por favor.</ME0006>
+    <ME0007>DELETE statement conflicted with COLUMN REFERENCE constraint</ME0007>
+    <ME0008>La elminación no fue realizada, este objeto contiene elementos que dependen de él</ME0008>
+    <ME0009>The DELETE statement conflicted with the REFERENCE constraint</ME0009>
+    <ME0010>La elminación no fue realizada, este objeto contiene elementos que dependen de él</ME0010>
+    <ME0011>clave duplicada</ME0011>
+    <ME0012>Registro duplicado, verifique por favor.</ME0012>
+    <ME0013>Instrucción DELETE en conflicto con la restricción COLUMN REFERENCE</ME0013>
+    <ME0014>La elminación no fue realizada, este objeto contiene elementos que dependen de él</ME0014>
+    <ME0015>Instrucción DELETE en conflicto con la restricción REFERENCE</ME0015>
+    <ME0016>La elminación no fue realizada, este objeto contiene elementos que dependen de él</ME0016>
+    <ME0017>El registro no fue encontrado en el sistema, verifique por favor.</ME0017>
+    <ME0018>Exception</ME0018>
+    <ME0019>.Consultar</ME0019>
+    <ME0020>no encontrado.</ME0020>
+  </MsjExc>
+</Parametros>

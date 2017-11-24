@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Parametros xmlns:xlink="http://www.w3.org/1999/xlink">
+  <Parametro>
+    <connectionString>Server=cerezo;User ID=sa;Password=Cerezo2016;Database=sevenDesarrollo;App=SevenCentralizacion;</connectionString>
+    <providerName>SQL</providerName>
+  </Parametro>
+</Parametros>

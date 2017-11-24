@@ -1,0 +1,65 @@
+﻿<ion-view view-title="Crear Actividad" ng-init="init();">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in-right">
+        <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">Actividad</div>
+                <select style="width: 60%;">
+                    <option ng-repeat="act in Actividades" value="act.ACT_CODI">
+                        {{act.ACT_NOMB}}
+                    </option>
+                </select>
+            </label>
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <input type="text" ng-model="data.filterClientes" placeholder="Consultar Cliente">
+                </label>
+                <button class="button button-small" ng-click="filtrarClientes();">
+                    <i class="ionic-icon ion-ios-search"></i>
+                </button>
+            </div>
+            <label class="item item-input item-select">
+                <div class="input-label">Cliente</div>
+                <select style="width: 60%;" ng-model="data.clienteSeleccionado" ng-change="changeCliente(data.clienteSeleccionado);">
+                    <option value="" hidden="hidden"></option>
+                    <option ng-repeat="cli in Clientes" ng-selected="$first" value="{{cli.PRO_CONT}}">{{cli.PRO_NOMB}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">Detalle Cliente</div>
+                <select style="width: 60%;" ng-model="data.dClienteSeleccionado" ng-change="changeDCliente(data.dClienteSeleccionado);">
+                    <option value="" hidden="hidden"></option>
+                    <option ng-repeat="dcli in DClientes" ng-selected="$first" value="{{dcli.DPR_CODI}}">{{dcli.DPR_NOMB}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">Contacto</div>
+                <select style="width: 60%;">
+                    <option value="" hidden="hidden"></option>
+                    <option ng-repeat="c in Contactos" ng-selected="$first" value="{{c.CON_CODI}}">{{c.CON_NOMB}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">Etapa Proceso</div>
+                <select style="width: 60%;">
+                    <option ng-repeat="eta in Etapas" ng-selected="$first" value="{{eta.ETA_CODI}}">{{eta.ETA_NOMB}}</option>
+                </select>
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Asunto</span>
+                <input type="text" ng-model="data.Asunto" placeholder="Asunto">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Fecha Actividad</span>
+                <input type="text" ng-model="data.FechaActividad" placeholder="Fecha Actividad">
+                <span class="badge badge-assertive">+</span>
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Hora Actividad</span>
+                <input type="text" ng-model="data.HoraActividad" placeholder="Hora Actividad">
+            </label>
+            <button class="button button-block button-calm">
+                Seleccione Fecha
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

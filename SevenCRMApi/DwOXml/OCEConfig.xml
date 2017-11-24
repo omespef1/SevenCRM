@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parametros xmlns:xlink="http://www.w3.org/1999/xlink">
+  <mensajes>
+    <MCO001>La cantidad de caracteres repetidos en la contraseña debe ser menor que </MCO001>
+    <MCO002>La contraseña no debe ser igual al usuario.</MCO002>
+    <MCO003>La contraseña no debe ser igual al inverso del usuario.</MCO003>
+    <MCO004>La cantidad de caracteres del usuario que puede tener la contraseña debe ser menor que </MCO004>
+    <MCO005>La contraseña debe tener longitud minima de </MCO005>
+    <MCO006>y maxima de </MCO006>
+    <MCO007>La Contraseña debe ser diferente a la anterior.</MCO007>
+    <MCO008>No está parametrizada la cantidad de contraseñas a guardar. Verifique por favor.</MCO008>
+    <MCO009>La contraseña escrita no se puede registrar de nuevo.</MCO009>
+    <MCO010>La cantidad de caracteres permitidos de la Contraseña anterior debe ser menor que </MCO010>
+    <MCO011>la contraseña se ha actualizado correctamente</MCO011>
+
+    <MBO000>El archivo de configuracion no se encuentra actualizado, verifique por favor</MBO000>
+    <MBO001>El archivo seleccionado no es valido, verifique por favor</MBO001>
+    <MBO002>El correo electronico no pudo ser enviado. Verifique los correos utilizados</MBO002>
+    <MBO003>El correo electronico no pudo ser enviado. Verifique la configuracion</MBO003>
+    <MBO004>La fecha de inicio real debe ser menor a la fecha de fina real, verifique por favor</MBO004>
+    <MBO005>Usuario y/o Contraseña no validos, verifique por favor. </MBO005>
+    <MBO006>Usuario inactivo, Contacte al administrador del sistema</MBO006>
+    <MBO007>Permiso de Acceso Denegado: Su perfil de usuario no tiene permiso para acceder a esta sección del sistema. Comuniquese con el administrador para solicitar el permiso de acceso.</MBO007>
+    <MBO008>El registro no fue encontrado</MBO008>
+    <MBO009>No se a Especificado un Tipo de Transacción o no es valido.</MBO009>
+    <MBO010>El registro consultado no existe ó ya fue eliminado por otro usuario, verifique por favor</MBO010>
+    <MBO011>¿Esta seguro que desea Eliminar el registro?</MBO011>
+    <MBO012>No se encontraron registros</MBO012>
+    <MBO013>Usuario no validos, verifique por favor</MBO013>
+    <MBO014>El código ingresado no coincide, verifique por favor</MBO014>
+    <MBO015>El mensaje ha sido enviado Exitosamente</MBO015>
+    <MBO016>Error al cambiar la clave, intente de nuevo</MBO016>
+    <MBO017>Su respuesta es incorrecta, intente de nuevo</MBO017>
+    <MBO018>Su clave ha sido cambiada Exitosamente</MBO018>
+    <MBO019>El Usuario de Windows no existe en el Directorio Activo, Contacte con el Administrador del Dominio</MBO019>
+    <MBO020>La aplicacion no esta configurada para utilizar Autenticacion Windows en el servidor IIS, por favor contacte con su administrador de servidor.</MBO020>
+    <MBO021>El Usuario de Windows no se encuentra registrado en el sistema, Contacte con el Administrador.</MBO021>
+    <MBO022>Recuperacion de contraseña</MBO022>
+    <MBO023>Su nueva clave es : </MBO023>
+    <MBO024>Su Sesión ha sido cerrada satisfactoria mente, gracias por contar con nosotros.</MBO024>
+    <MBO025>Su Sesión ha expirado, por favor ingrese de nuevo.</MBO025>
+    <MBO026>No se a encontrado menú parametrizado, verifique por favor Menus vs Grupos. (Opciones que agrupan menús)</MBO026>
+    <MBO027>No se a encontrado menú parametrizado, verifique por favor Menus vs Grupos. (Programas)</MBO027>
+    <MBO028>No dispone del programa necesario para la acción</MBO028>
+    <MBO029>No se a encontrado menú parametrizado, verifique por favor</MBO029>
+    <MBO030>No se a encontrado menú parametrizado, verifique por favor. (Menú)</MBO030>
+    <MBO031>La contraseña no es correcta. </MBO031>
+    <MBO032>Ya existe un usuario con este nombre</MBO032>
+    <MBO033>La contraseña ha sido cambiada Exitosamente</MBO033>
+    <MBO034>Le restan (</MBO034>
+    <MBO035>) intentos antes de inactivar su usuario.</MBO035>
+    <MBO036>Error en </MBO036>
+    <MBO037>Registro duplicado, verifique por favor. </MBO037>
+    <MBO038>La eliminación no fue realizada, este objeto contiene elementos que dependen de él</MBO038>
+    <MBO039>La Respuesta no es correcta. </MBO039>
+    <MBO040>El Usuario no tiene Empresas asociadas verifique por favor o Consulte con el Administrador del Sistema </MBO040>
+    <MBO041>No tiene permisos de Acceso, Contacte al Administrador</MBO041>
+    <MBO042>Datos Modificados con exito, por Favor ingrese de nuevo</MBO042>
+    <MBO043>No ha seleccionado ningun registro para editar, verifique por favor.</MBO043>
+    <MBO044> http://localhost:65254/Ophelia/OLogin.aspx </MBO044>
+    <MBO045> http://localhost:65254/Ophelia/DwOCliente/CorrBien.jpg </MBO045>
+    <MBO046> A cancelado la modificacion de clave, si no realiza el proceso de cambio de clave no podra ingresar. Verifique por favor </MBO046>
+  </mensajes>
+</parametros>

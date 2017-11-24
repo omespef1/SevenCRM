@@ -1,0 +1,23 @@
+﻿<ion-modal-view title="Seleccionar Conexión" ng-init="initConexion();">
+    <div class="list card">
+        <div class="item item-divider"><h2>Seleccione una Conexión</h2></div>
+        <div class="item item-body">
+            <div>
+                <div class="list">
+                     <select class="item item-input" style="background-color:#E6E6E6;color:#232E3D;" ng-model="ConexionSeleccionada">
+                        <option ng-repeat="GnConex in Conexiones" value="{{GnConex.CNX_IPSR}}">{{GnConex.CNX_NOMB}}</option>
+                    </select>
+                </div>
+                {{message_conexion}}
+            </div>
+            <div class="row">
+               <!-- <div class="col">
+                    <button class="button icon-left button-assertive button-small button-block  icon ion-android-cancel" ng-click="closeModal()">Cancelar</button>
+                </div>-->
+                <div class="col">
+                    <button class="button icon-left button-balanced button-small button-block  icon ion-ios-checkmark-outline " ng-click="aceptarConexion(ConexionSeleccionada);">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-modal-view>

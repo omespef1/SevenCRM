@@ -1,0 +1,43 @@
+﻿<ion-view view-title="Login" class="background-theme" align-title="left">
+    <ion-content>
+        <div class="hero no-header flat" style="height: auto !important;">
+            <div class="">
+                <div class="app-icon"></div>
+                <h3>SEVEN CRM</h3>
+            </div>
+        </div>
+        <div class="list" style="padding-right: 25px;">
+            <div ng-if="!isHistorial">
+                <ion-md-input placeholder="Usuario" highlight-color="balanced" ng-model="loginData.user" type="text"></ion-md-input>
+                <ion-md-input placeholder="Password" highlight-color="energized" ng-model="loginData.pass" type="password"></ion-md-input>
+                <br />
+                <div class="item item-checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" value="on" ng-model="loginData.remember">
+                    </label>
+                    <h3>recordarme</h3>
+                </div>
+            </div>
+        </div>
+        <div ng-if="isHistorial" style="margin-left: 20px;">
+            <div style="margin-left: 10px;">Toca para iniciar sesión</div>
+            <div class="list" style="padding-right: 25px;">
+                <a ng-repeat="user in userHistorial" class="item item-avatar" on-hold="onHold($index);" ng-href="#/userlogin/{{user.Usu_Codi}}">
+                    <img src="data:image/png;base64,{{user.Usu_Foto}}">
+                    <h2">{{user.Usu_Codi}}</h2>
+                    <p style="color: #777;">{{user.Usu_Nomb}}</p>                
+                </a>
+            </div>
+        </div>
+        <div ng-if="isHistorial" class="padding">
+            <hr />
+            <button ng-click="doNewSessionLogin();" class="button button-theme button-full icon-left ion-plus button-raised ink">Iniciar con otra cuenta</button>
+        </div>
+        <div ng-if="!isHistorial" class="padding">
+            <button ng-click="doLogin();" class="button button-theme button-full icon-left ion-log-in button-raised ink">Ingresar</button>
+        </div>
+        <div class="button-bar" style="margin: 0 auto; position:absolute; bottom: 0;">
+            <small style="text-align: center; width: 100%">Copyright © 1992 - 2017. Digital Ware - Todos los derechos reservados. v{{version}}</small>
+        </div>
+    </ion-content>
+</ion-view>

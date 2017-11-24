@@ -1,0 +1,65 @@
+﻿<ion-modal-view class="modal slide-in-up ng-enter active ng-enter-active background-theme">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">Detalle de la Actividad</h1>
+        <button class="button button-icon button-clear ion-ios-close-outline" style="top: 0;" ng-click="closeModalHorario()" ></button>
+    </ion-header-bar>
+    <ion-content class="padding scroll-content ionic-scroll  has-header">
+        <div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+            <!--<div class="list">
+                <label class="item item-input">
+                    <span class="input-label" aria-label="First Name" id="_label-0">First Name</span>
+                    <input ng-model="newUser.firstName" type="text" class="ng-pristine ng-untouched ng-valid ng-empty">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label" aria-label="Last Name" id="_label-1">Last Name</span>
+                    <input ng-model="newUser.lastName" type="text" class="ng-pristine ng-untouched ng-valid ng-empty">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label" aria-label="Email" id="_label-2">Email</span>
+                    <input ng-model="newUser.email" type="text" class="ng-pristine ng-untouched ng-valid ng-empty">
+                </label>
+                <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+            </div>-->
+             <div class="item card-item">
+                <div class="card light-bg ink ink-dark">
+                    <div class="item item-text-wrap">
+                        <strong>{{horarioSeleccionado.AGE_FINI | date: 'h:mm:ss a'}} - {{horarioSeleccionado.AGE_FFIN | date: 'h:mm:ss a'}}</strong>
+                        <div class="card-footer text-left">
+                            <p>
+                                <b>Cliente:</b> {{horarioSeleccionado.PRO_NOMB}}<br />
+                                <b>Contacto:</b> {{horarioSeleccionado.CON_NOMB}} {{horarioSeleccionado.CON_APEL}}<br />
+                                <b>Actividad:</b> {{horarioSeleccionado.ACT_NOMB}}<br />
+                                <b>Asunto:</b> {{horarioSeleccionado.AGE_ASUN}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="button button-block button-assertive margin-right-4 no-padding" ng-click="cancelarActividad(horarioSeleccionado);">Cancelar</button>
+                    <button class="button button-block button-balanced margin-left-4 no-padding" ng-click="invitarActividad(horarioSeleccionado);">Invitar</button>
+                </div>                
+            </div>
+        </div>
+        <div class="scroll-bar scroll-bar-v">
+        <div class="scroll-bar-indicator scroll-bar-fade-out" style="transform: translate3d(0px, 0px, 0px) scaleY(1); height: 0px;"></div>
+        </div>
+    </ion-content>
+</ion-modal-view>
+<!--<ion-modal-view title="Seleccionar Conexión" ng-init="initConexion();">
+    <div class="item card-item">
+        <div class="card light-bg ink ink-dark">
+            <div class="item item-text-wrap">
+                <strong>{{horarioSeleccionado.AGE_FINI | date: 'h:mm:ss a'}} - {{horarioSeleccionado.AGE_FFIN | date: 'h:mm:ss a'}}</strong>
+                <div class="card-footer text-left">
+                    <p>
+                        {{horarioSeleccionado.PRO_NOMB}}<br />
+                        {{horarioSeleccionado.CON_NOMB}} {{horarioSeleccionado.CON_APEL}}<br />
+                        {{horarioSeleccionado.ACT_NOMB}}<br />
+                        {{horarioSeleccionado.AGE_ASUN}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="button button-block button-balanced" ng-click="closeModalHorario();">OK</button>
+    </div>
+</ion-modal-view>-->

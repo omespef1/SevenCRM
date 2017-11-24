@@ -1,0 +1,27 @@
+<ion-menu [content]="mycontent">
+  <ion-header class="header card-background-page">
+    <img class="card-circle-img" src="../../assets/img/banner.png" />
+    <div class="card-title">Diegorl</div>
+    <div class="card-subtitle">Diego A. Roldán</div>
+  </ion-header>
+  <ion-content>
+    <ion-list no-lines>
+      <button ion-item (click)="openPage(loginPage)">
+        <ion-icon name="ios-git-network-outline" item-left></ion-icon>
+        Flujos
+      </button>
+      <button ion-item (click)="openPage(loginPage)">
+        <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+        Agenda
+      </button>
+      <button ion-item (click)="openPage(signupPage)">
+        <ion-icon name="ios-backspace-outline" item-left></ion-icon>
+        Salir
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage">
+
+</ion-nav>

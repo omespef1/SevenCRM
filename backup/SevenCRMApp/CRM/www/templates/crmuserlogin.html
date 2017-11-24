@@ -1,0 +1,32 @@
+﻿<ion-view view-title="Login" align-title="left" ng-init="init();" class="background-theme">
+    <ion-content>
+        <button class="button button-theme button-fab margin" ng-click="toLogin();">
+            <i class="icon ion-chevron-left"></i>
+        </button>
+        <div class="hero no-header flat" style="height: auto !important;">
+            <div class="padding">
+                <div class="icon-circle" style="background: url(data:image/png;base64,{{user.Usu_Foto}}) center no-repeat;">
+                </div>
+                <br />
+                <h3>{{loginData.user}}</h3>
+            </div>
+        </div>
+        <div class="list" style="padding-right: 25px; margin: 0 20px;">
+            <div style="margin-left: 10px;"><h5>Ingrese la contraseña</h5></div>
+            <ion-md-input placeholder="Password" highlight-color="energized" ng-model="loginData.pass" type="password"></ion-md-input>
+            <br />
+            <div class="item item-checkbox">
+                <label class="checkbox">
+                    <input type="checkbox" value="on" ng-model="loginData.remember">
+                </label>
+                <h3>recordarme</h3>
+            </div>
+        </div>
+        <div class="padding">
+            <button ng-click="doLogin();" class="button button-theme button-full icon-left ion-log-in button-raised ink">Ingresar</button>
+        </div>
+        <div class="button-bar" style="margin: 0 auto; position:absolute; bottom: 0;">
+            <small style="text-align: center; width: 100%">Copyright © 1992 - 2017. Digital Ware - Todos los derechos reservados.</small>
+        </div>
+    </ion-content>
+</ion-view>

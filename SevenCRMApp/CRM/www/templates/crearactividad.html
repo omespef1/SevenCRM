@@ -1,0 +1,81 @@
+﻿<ion-view view-title="Crear Actividad" ng-init="init();">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in-right">
+        
+            <div class="list">
+                <form name="frmActividad">
+                    <label class="item item-input item-select">
+                        <div class="input-label">Agendar a</div>
+                        <select style="width: 60%;" required="required"
+                            ng-model="data.usu_ejec" ng-options="usu.Usu_Codi as usu.Usu_Nomb for usu in data.Empleados">
+                            <option value="" hidden="hidden"></option>
+                        </select>
+                    </label>
+                    <div class="item item-input-inset">
+                        <label class="item-input-wrapper">
+                            <input type="text" ng-model="data.filter" placeholder="Consultar Cliente">
+                        </label>
+                        <button class="button button-small padding-left_rigth-10" ng-click="filtrarClientes();">
+                            <i class="ionic-icon ion-ios-search"></i>
+                        </button>
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Cliente</div>
+                        <select style="width: 60%;" required="required" ng-change="changeCliente(data.pro_cont);"
+                            ng-model="data.pro_cont" ng-options="cli.PRO_CONT as cli.PRO_NOMB for cli in data.Clientes">
+                            <option value="" hidden="hidden"></option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Detalle Cliente</div>
+                        <select style="width: 60%;" required="required" ng-change="changeDCliente(data.dpr_codi);"
+                            ng-model="data.dpr_codi" ng-options="dcli.DPR_CODI as dcli.DPR_NOMB for dcli in data.DClientes">
+                            <option value="" hidden="hidden"></option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Contacto</div>
+                         <select style="width: 60%;" required="required"
+                            ng-model="data.con_codi" ng-options="c.CON_CODI as c.CON_NOMB for c in data.Contactos">
+                            <option value="" hidden="hidden"></option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Actividad</div>
+                        <select style="width: 60%;" required="required" 
+                            ng-model="data.act_codi" ng-options="act.ACT_CODI as act.ACT_NOMB for act in data.Actividades">
+                            <option value="" hidden="hidden"></option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Etapa Proceso</div>
+                        <!--<select style="width: 60%;" ng-model="data.eta_codi">
+                            <option ng-repeat="eta in data.Etapas" ng-selected="$first" ng-value="eta.ETA_CODI">{{eta.ETA_NOMB}}</option>
+                        </select>-->
+                        <select style="width: 60%;" required="required" 
+                            ng-model="data.eta_codi" ng-options="eta.ETA_CODI as eta.ETA_NOMB for eta in data.Etapas">
+                          <option value="" hidden="hidden"></option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Asunto</span>
+                        <input type="text" ng-model="data.Asunto" placeholder="Asunto">
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Fecha Actividad</span>
+                        <input type="text" ng-model="data.FechaActividad" readonly="readonly" ng-click="showDatePicker();" required="required" />
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Hora Actividad</span>
+                        <!--<input type="time" ng-model="data.HoraActividad" placeholder="Hora Actividad" 
+                            readonly="readonly" ng-click="showTimePicker();" />-->
+                        <input type="text" ng-model="data.HoraActividad" readonly="readonly" ng-click="showTimePicker();" required="required" />
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">Duración (horas)</span>
+                        <input type="number" ng-model="data.Duracion" placeholder="Duración (horas)" required="required">
+                    </label>
+                </form>
+            </div>
+        
+    </ion-content>
+</ion-view>

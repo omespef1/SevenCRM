@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parametros xmlns:xlink="http://www.w3.org/1999/xlink">
+	<parametro>
+		<PathClie>D:\SKClient\SKClient\DwImg\DwImgClie\</PathClie>
+		<PathEmpre>D:\SKClient\SKClient\DwImg\DwImgEmpre\</PathEmpre>
+		<PathProvee>D:\SKClient\SKClient\DwImg\DwImgProvee\</PathProvee>
+		<PathUsua>D:\SKClient\SKClient\DwImg\DwImgUsua\</PathUsua>
+		<PathActi>D:\SKClient\SKClient\DwImg\DwImgActi\</PathActi>
+		<PathImgTemp>D:\SKClient\SKClient\DwImg\DwImgATmp\</PathImgTemp>
+    <PathAdjTemp>D:\SKClient\SKClient\DwImg\DwAdjATmp\</PathAdjTemp>
+		<ExtensionImg>.gif-.png-.jpeg-.jpg</ExtensionImg>
+		<WebMail>smtp.gmail.com</WebMail>
+		<Puerto>587</Puerto>
+		<PaginaWeb>http://dominio/SKClient</PaginaWeb>
+		<UserMail>luisv@digitalware.com.co</UserMail>
+		<PasswordMail>Ville25896qw*</PasswordMail>
+	</parametro>
+</parametros>
